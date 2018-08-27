@@ -1,0 +1,12 @@
+/*
+Theme Name: Twentyseventeen child theme
+Template: twentyseventeen
+
+Theme URI: http://example.com
+Description: Child theme for twentyseventeen
+Author: Andrew
+Version: 1.0
+*/
+
+/* импортируем стили родительской темы */
+@import url("../twentyseventeen/style.css");
