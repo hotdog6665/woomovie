@@ -19,7 +19,12 @@ do_action( 'woocommerce_before_main_content' );
 <?php while ( have_posts() ) : the_post(); ?>
 
     <?php wc_get_template_part( 'content', 'single-product' ); ?>
-
+    <?php
+    echo "<pre>";
+        print_r(123);
+    echo "</pre>";
+    exit('Terninated on line: ' . __LINE__);
+    ?>
 <?php endwhile; // end of the loop. ?>
 
 <?php

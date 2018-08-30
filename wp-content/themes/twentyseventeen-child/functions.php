@@ -78,7 +78,11 @@ function my_extra_fields() {
 
 function movie_price_field( $post ){
     ?>
-    <p><label>Movie price <input type="number" name="extra[_price]" value="<?php echo get_post_meta($post->ID, '_price', 1); ?>"/></label></p>
+    <p><label>Regular price ($) <input type="number" name="_regular_price" value="<?php echo get_post_meta($post->ID, '_regular_price', 1); ?>"/></label></p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
+
+    <p><label>Sale price ($) <input type="number" name="_sale_price" value="<?php echo get_post_meta($post->ID, '_sale_price', 1); ?>"/></label></p>
 
     <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />
     <?php
